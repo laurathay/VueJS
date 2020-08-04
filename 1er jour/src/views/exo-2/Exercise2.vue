@@ -1,10 +1,19 @@
 <template>
   <div class="exercise-2"></div>
+  {{ users }}
 </template>
 
 <script>
+import{ users } from "./data";
+
 export default {
-  name: "Exercise2"
+  name: "Exercise2",
+
+  data(){
+    return{
+        users:users,
+    };
+  },
 };
 </script>
 
