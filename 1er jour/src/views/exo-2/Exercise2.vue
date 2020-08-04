@@ -12,7 +12,16 @@ export default {
   data(){
     return{
         users:users,
+        notPremium; true,
+        firstname:" ",
+        lastname:" ",
     };
+  },
+
+  computed:{
+    fullName(){
+      return`${this.firstname} ${this.lastname}`;
+    },
   },
 };
 </script>

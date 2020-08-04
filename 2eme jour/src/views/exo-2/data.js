@@ -5,7 +5,9 @@ export const users = [
     lastname: "Doe",
     email: "john.doe@gmail.bzh",
     password: "123456",
-    premium: true
+    premium: true,
+    image: "https://picsum.photos/80/80?grayscale",
+
   },
   {
     id: 2,
@@ -13,7 +15,8 @@ export const users = [
     lastname: "Smith",
     email: "jane.smith@gmail.bzh",
     password: "password",
-    premium: false
+    premium: false,
+    image: "https://picsum.photos/80/80?grayscale",
   },
   {
     id: 3,
@@ -21,7 +24,9 @@ export const users = [
     lastname: "Trotreau",
     email: "anne.trotreau@gmail.bzh",
     password: "1234567",
-    premium: true
+    premium: true,
+    image: "https://picsum.photos/200/300?grayscale",
+
   },
   {
     id: 4,
@@ -29,6 +34,8 @@ export const users = [
     lastname: "Steiner",
     email: "ulrich.steiner@gmail.bzh",
     password: "securePassword",
-    premium: false
+    premium: false,
+    image: "https://picsum.photos/200/300?grayscale",
+
   }
 ];
