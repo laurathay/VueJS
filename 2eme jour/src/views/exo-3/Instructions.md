@@ -2,7 +2,7 @@
 
 ## Components
 
-1. Créez un nouveau composant `Bouton.vue` dans le dossier components de l'exercice. Celui-ci doit contenir un bouton.
+1. Créez un nouveau composant = fichier.vue donc template/script/ style `Bouton.vue` dans le dossier components de l'exercice. Celui-ci doit contenir un bouton.
 2. Importez ce composant dans l'exercice 3
 3. Ajoutez-lui quelques props : `hasError`, `error`, `green`, `title`
 4. Faites en sorte que lorsque la prop `hasError` est à `true`, le bouton possède un contour rouge
