@@ -1,24 +1,33 @@
 <template>
   <div class="exercise-2">
-    <div class="card" v-for="(utilisateur, index) in users" :key="index">
-      <!-- <label v-model="lastname"> -->
-         {{ fullname }}
-      <p>{{utilisateur.email}}</p>
-      <p>{{utilisateur.password}}</p>
+    <!-- utilisateur on l'appelle comme sur ligne 22, la meme clé, on met users obliger -->
+    <div class="card" v-for="utilisateur in tableauUsers" :key="utilisateur.id">
+      <!-- on rend la classe du nom de l'utilsateur dynamique pour changer de couleur le nom quand il est premium -->
+      <p :class="{premium: utilisateur.premium}"> ✨{{ fullName(utilisateur) }} </p>
+      <!-- autre facon de faire  -->
+      <p v-if="utilisateur.premium" class="premium"> ✨ PREMIUM </p>
 
-      <!-- pour le binding pour indiquer que l'utilisateur est premium en use classes dynamiques -->
-      <p :class="{'notPremium' : !utilisateur.premium}">Compte Premium ✨</p>
-      <img :src="utilisateur.image" alt="">
+      <!-- y faut rajouter du coup image: lien dans data.js -->
+       <!-- <img :src="utilisateur.image" alt="image aléatoire"> -->
 
-      <!-- Ajouter un bouton permettant de rendre premium ou non les utilisateurs  -->
-      <button v-if="!utilsateur.premium" type="button" name="button" :class="{'active': utilisateur.premium}" @click="utilisateur.premium = !utilisateur.premium">
-        Devenir Premium
+       <!-- autre possibilité -->
+       <img :src="urlImage +utilisateur.id" alt="autre image aléatoire">
+
+      <p> {{ utilisateur.email }} </p>
+      <p> {{ utilisateur.password }}</p>
+
+      <!-- pour se premiumiumise -->
+      <button @click="utilisateur.premium = !utilisateur.premium" >
+        <!-- comme si on avait marqué === true  -->
+       <span v-if="!utilisateur.premium "> je premiumiumise </span>
+       <!-- comme si on avait marqué === true  -->
+       <span v-if="utilisateur.premium "> je depremiumiumise </span>
       </button>
 
-      <button v-if="utilsateur.premium" type="button" name="button" :class="{'active': utilisateur.premium}" @click="utilisateur.premium = !utilisateur.premium" >
-        Laisse tomber je suis déjà cool
+      <!-- custom event -->
+      <button @click="supprimer(utilisateur)" type="button" name="button">
+          supprimer
       </button>
-
     </div>
   </div>
 </template>
@@ -34,26 +43,22 @@
     //pour qu'on puisse s'en servir en dehors des balises
     data() {
       return {
-        users: users,
-        firstname:"" ,
-        lastname:"" ,
-
-        notPremium: true,
+        //la clé et la valeur
+        tableauUsers: users,
+        urlImage: "http://lorempixel.com/400/200/animals/",
       };
     },
+    //pour afficher le nom en complet avec une variable
+    methods:{
+      fullName(utilisateur){
+        return utilisateur.firstname + " " + utilisateur.lastname;
+      },
 
-    computed:{
-      fullName(){
-        return`${this.firstname} + ${this.lastname}`;
+      //envoyer des données dans le payload pour que les données sois récupéré plus haut  
+      supprimer(membre){
+        this.$emit("bannissement", membre)
       },
     },
-
-    methods:{
-      goPremium(){
-        this.notPremium : false,
-
-      }
-    }
   };
 </script>
 
@@ -68,8 +73,7 @@
   }
 
   .card {
-    width: 300px;
-    height: 200px;
+
     background-color: #d1e4fb;;
     display: flex;
     flex-direction: column;
@@ -85,5 +89,9 @@
 
   .notPremium {
     display: none;
+  }
+
+  .premium{
+    color: pink;
   }
 </style>

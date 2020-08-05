@@ -6,7 +6,6 @@ export const users = [
     email: "john.doe@gmail.bzh",
     password: "123456",
     premium: true,
-    image: "https://picsum.photos/80/80?grayscale",
 
   },
   {
