@@ -30,6 +30,11 @@ const routes = [
     path: "/exo-3",
     name: "Exercise3",
     component: Exercise3
+  },
+  {
+    path: "/users",
+    name: "Utilisateurs",
+    component: Utilisateurs
   }
 ];
 

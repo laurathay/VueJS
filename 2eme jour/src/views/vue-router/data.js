@@ -30,5 +30,5 @@ export const users = [
     email: "ulrich.steiner@gmail.bzh",
     password: "securePassword",
     premium: false
-  }
+  },
 ];
