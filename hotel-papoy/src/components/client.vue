@@ -36,7 +36,8 @@ export default {
 
   computed: {
     fullName(){
-      return `${firstname} ${lastname}`
+      //ne pas oublier les this dans le script avec le `${} 
+      return `${this.firstname} ${this.lastname}`
     }
   }
 }
