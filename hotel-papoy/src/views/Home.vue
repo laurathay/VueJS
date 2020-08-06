@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- le nom de ma props avec sa variable -->
+    <client :firstname="prenom" :lastname="nom" :address="adresse" :email="courriel"></client>
+
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import client from '@/components/client.vue'
 
 export default {
   name: 'Home',
+
   components: {
-    HelloWorld
-  }
-}
+    client
+  },
+
+  data(){
+    return {
+        prenom: "Boo",
+        nom: "BOO",
+        adresse:"234 rue des boulets",
+        courriel: "jaipasdemail@email.com"
+    };
+  },
+};
+
 </script>
