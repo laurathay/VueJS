@@ -4,7 +4,9 @@ import Home from "../views/Home.vue";
 import Exercise1 from "@/views/exo-1/Exercise1.vue";
 import Exercise2 from "@/views/exo-2/Exercise2.vue";
 import Exercise3 from "@/views/exo-3/Exercise3.vue";
-//import Exercise4 from "@/views/exo-4/Exercise4.vue";
+// import UserList from
+// import UserDetails from
+import Exercise4 from "@/views/exo-4/Exercise4.vue";
 //import Exercise5 from "@/views/exo-5/Exercise5.vue";
 //import Exercise6 from "@/views/exo-6/Exercise6.vue";
 
@@ -32,10 +34,15 @@ const routes = [
     component: Exercise3
   },
   {
-    path: "/users",
-    name: "Utilisateurs",
-    component: Utilisateurs
-  }
+    path: "/exo-4",
+    name: "Exercise4",
+    component: Exercise4
+  },
+//
+  //   path: "/users",
+  //   name: "Utilisateurs",
+  //   component: Utilisateurs
+  // },
 ];
 
 const router = new VueRouter({
