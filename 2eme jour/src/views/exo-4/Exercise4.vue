@@ -11,16 +11,29 @@
     Bye you
   </slotbutton>
 
+  <ComposantUn>
+    <template vslot:kiwi>
+      <header> kiwi </header>
+    </template>
+    <template vslot:cerise>
+      <h2> cerise </h2>
+    </template>
+    <template vslot:fraise>
+      <button> fraise </button> <!-- comme fraise est en premier dans composant un -->
+    </template>
+  </ComposantUn>
+
   </div>
 </template>
 
 <script>
 import slotbutton from "./slot-button.vue";
+import ComposantUn from "./ComposantUn";
 
 export default {
   name: "Exercise4",
 
-  components: {slotbutton}
+  components: {slotbutton, ComposantUn},
 };
 </script>
 

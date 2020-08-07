@@ -34,4 +34,12 @@ export default {
     border-style: solid;
     padding: 5px 5px;
   }
+
+  button {
+    color: pink;
+    background-color: yellow;
+    border-color: inherit;
+    border-style: solid;
+    padding: 5px 5px;
+  }
 </style>
