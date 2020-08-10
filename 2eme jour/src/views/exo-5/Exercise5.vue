@@ -30,6 +30,7 @@ export default {
       return{
       //on met la data dans une boite vide = restaurants
       restaurants: null,
+      nouveauRestaurant:'',
     }
   },
 
@@ -43,6 +44,16 @@ export default {
       // sachant que le nom du tableau de l'adresse s'appelle data c'est pour ca qu'on a mis data a la fin de response
       .then(response => (this.restaurants = response.data))
     }
+    // newRestaurant(){
+    //   axios.post('https://restop-toulouse.herokuapp.com/restos', {
+    //     nom: this.newRestaurant
+    //   })
+    //     .then((response) => {
+    //       const data = response.data;
+    //       this.restaurant.push(response.data);
+    //       this.newRestaurant = '';
+    //     });
+    // }
   },
 };
 </script>
