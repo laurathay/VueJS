@@ -165,4 +165,28 @@ export default {
 .exercise-5 {
   color: $grey;
 }
+
+.exercise-5 input, label{
+  display: flex;
+}
+
+input{
+  border-top : white solid;
+  border-right: white solid;
+  border-left : white solid;
+  border-bottom : black 1px solid;
+  margin : 5px 5px;
+}
+
+form{
+  margin-left:25em;
+}
+
+button{
+  color: pink;
+  padding: 10px 10px;
+  background-color: yellow;
+  border: white solid;
+  border-radius: 20%;
+}
 </style>
